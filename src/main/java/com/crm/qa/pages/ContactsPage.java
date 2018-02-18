@@ -43,16 +43,7 @@ public class ContactsPage extends TestBase {
 	@FindBy(xpath="//input[@value='Save' and @class='button']")
 	public WebElement saveButton;
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
 	//initializing page objects
 		public ContactsPage(){		
 			PageFactory.initElements(driver, this);		
@@ -72,12 +63,7 @@ public class ContactsPage extends TestBase {
 
 		 }
 		 
-		 
-		 
-		
-		  
-   
-    
+
         public void selectContactByName(String name){ 
     	    driver.findElement(By.xpath("//a[text()='"+name+"']//parent::td[@class='datalistrow']"
     			+"//preceding-sibling::td[@class='datalistrow']/input[@name='contact_id']")).click();   	
