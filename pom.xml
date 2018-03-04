@@ -33,7 +33,8 @@
 				<configuration>
 					<suiteXmlFiles>
 						<!-- TestNG suite XML files -->
-						<suiteXmlFile>testng-sanity.xml</suiteXmlFile>e>						
+						<suiteXmlFile>testng-sanity.xml</suiteXmlFile>e>
+						<suiteXmlFile>testng-extentReport.xml</suiteXmlFile>e>																	
 					</suiteXmlFiles>
 				</configuration>
 			</plugin>
