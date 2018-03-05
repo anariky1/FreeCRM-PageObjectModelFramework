@@ -14,32 +14,20 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
   
-  <build>
-		<plugins>
-			<!-- Compiler plug-in -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<configuration>
-					<source>${jdk.level}</source>
-					<target>${jdk.level}</target>
-				</configuration>
-			</plugin>
-			<!-- Below plug-in is used to execute tests -->
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.18.1</version>
-				<configuration>
-					<suiteXmlFiles>
-						<!-- TestNG suite XML files -->
-						<suiteXmlFile>testng-sanity.xml</suiteXmlFile>
-						<suiteXmlFile>testng-extentReport.xml</suiteXmlFile>																	
-					</suiteXmlFiles>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+  <profiles>
+    <profile>
+        <id>test1</id>
+        <properties>
+            <suite.pattern>**/LoginPageTest.java</suite.pattern>
+        </properties>
+    </profile>
+    <profile>
+        <id>test2</id>
+        <properties>
+            <suite.pattern>**/HomePageTest.java</suite.pattern>
+        </properties>
+    </profile>
+   </profiles>
 
   <dependencies>
     
